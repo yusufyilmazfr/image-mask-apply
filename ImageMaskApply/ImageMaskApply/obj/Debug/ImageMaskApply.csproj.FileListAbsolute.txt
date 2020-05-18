@@ -1,0 +1,9 @@
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\bin\Debug\ImageMaskApply.exe.config
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\bin\Debug\ImageMaskApply.exe
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\bin\Debug\ImageMaskApply.pdb
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.csprojAssemblyReference.cache
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.Form1.resources
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.Properties.Resources.resources
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.csproj.GenerateResource.cache
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.exe
+D:\Program Files\GitHub\image-mask-apply\ImageMaskApply\ImageMaskApply\obj\Debug\ImageMaskApply.pdb
