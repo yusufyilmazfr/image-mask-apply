@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.pctrCurrentImageNew = new System.Windows.Forms.PictureBox();
-            this.lblImageName = new System.Windows.Forms.Label();
-            this.btnOpenFileDialog = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
             this.pctrCurrentImageOld = new System.Windows.Forms.PictureBox();
+            this.trackBarBorderPower = new System.Windows.Forms.TrackBar();
+            this.btnSelectAndApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctrCurrentImageNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrCurrentImageOld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBorderPower)).BeginInit();
             this.SuspendLayout();
             // 
             // pctrCurrentImageNew
@@ -45,23 +47,16 @@
             this.pctrCurrentImageNew.TabIndex = 7;
             this.pctrCurrentImageNew.TabStop = false;
             // 
-            // lblImageName
+            // btnApply
             // 
-            this.lblImageName.AutoSize = true;
-            this.lblImageName.Location = new System.Drawing.Point(9, 336);
-            this.lblImageName.Name = "lblImageName";
-            this.lblImageName.Size = new System.Drawing.Size(0, 17);
-            this.lblImageName.TabIndex = 6;
-            // 
-            // btnOpenFileDialog
-            // 
-            this.btnOpenFileDialog.Location = new System.Drawing.Point(550, 335);
-            this.btnOpenFileDialog.Name = "btnOpenFileDialog";
-            this.btnOpenFileDialog.Size = new System.Drawing.Size(101, 33);
-            this.btnOpenFileDialog.TabIndex = 5;
-            this.btnOpenFileDialog.Text = "Select Image";
-            this.btnOpenFileDialog.UseVisualStyleBackColor = true;
-            this.btnOpenFileDialog.Click += new System.EventHandler(this.btnOpenFileDialog_Click);
+            this.btnApply.Enabled = false;
+            this.btnApply.Location = new System.Drawing.Point(433, 336);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(101, 33);
+            this.btnApply.TabIndex = 5;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // pctrCurrentImageOld
             // 
@@ -72,20 +67,42 @@
             this.pctrCurrentImageOld.TabIndex = 4;
             this.pctrCurrentImageOld.TabStop = false;
             // 
+            // trackBarBorderPower
+            // 
+            this.trackBarBorderPower.Enabled = false;
+            this.trackBarBorderPower.Location = new System.Drawing.Point(12, 336);
+            this.trackBarBorderPower.Maximum = 50;
+            this.trackBarBorderPower.Name = "trackBarBorderPower";
+            this.trackBarBorderPower.Size = new System.Drawing.Size(415, 56);
+            this.trackBarBorderPower.TabIndex = 8;
+            this.trackBarBorderPower.Value = 14;
+            // 
+            // btnSelectAndApply
+            // 
+            this.btnSelectAndApply.Location = new System.Drawing.Point(542, 335);
+            this.btnSelectAndApply.Name = "btnSelectAndApply";
+            this.btnSelectAndApply.Size = new System.Drawing.Size(101, 33);
+            this.btnSelectAndApply.TabIndex = 5;
+            this.btnSelectAndApply.Text = "Select/Apply";
+            this.btnSelectAndApply.UseVisualStyleBackColor = true;
+            this.btnSelectAndApply.Click += new System.EventHandler(this.btnOpenFileDialog_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 374);
+            this.Controls.Add(this.trackBarBorderPower);
             this.Controls.Add(this.pctrCurrentImageNew);
-            this.Controls.Add(this.lblImageName);
-            this.Controls.Add(this.btnOpenFileDialog);
+            this.Controls.Add(this.btnSelectAndApply);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.pctrCurrentImageOld);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pctrCurrentImageNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrCurrentImageOld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBorderPower)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,9 +111,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pctrCurrentImageNew;
-        private System.Windows.Forms.Label lblImageName;
-        private System.Windows.Forms.Button btnOpenFileDialog;
+        private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.PictureBox pctrCurrentImageOld;
+        private System.Windows.Forms.TrackBar trackBarBorderPower;
+        private System.Windows.Forms.Button btnSelectAndApply;
     }
 }
 

@@ -17,6 +17,8 @@ namespace ImageMaskApply
             InitializeComponent();
         }
 
+        public int ImageBorderPower => trackBarBorderPower.Value;
+
         private void btnOpenFileDialog_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
@@ -30,14 +32,15 @@ namespace ImageMaskApply
                 Bitmap image = new Bitmap(file.FileName);
 
                 pctrCurrentImageOld.Image = image;
-                lblImageName.Text = file.FileName;
 
                 Bitmap newMaskAppliedImage = ApplyMaskToImage(in image);
 
                 pctrCurrentImageNew.Image = newMaskAppliedImage;
 
-                image = null;
-                newMaskAppliedImage = null;
+                trackBarBorderPower.Enabled = true;
+                btnApply.Enabled = true;
+                //image = null;
+                //newMaskAppliedImage = null;
             }
             else
             {
@@ -108,7 +111,7 @@ namespace ImageMaskApply
                     int dy = cd.R - cu.R;
                     double power = Math.Sqrt(dx * dx / 4 + dy * dy / 4);
 
-                    if (power > 14)
+                    if (power > ImageBorderPower)
                     {
                         if (rowDetail.StartColumn == 0)
                         {
@@ -157,6 +160,17 @@ namespace ImageMaskApply
                 .Take(count)
                 .Select(i => i.Key)
                 .ToList();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            var image = pctrCurrentImageOld.Image as Bitmap;
+
+            Bitmap newMaskAppliedImage = ApplyMaskToImage(in image);
+
+            pctrCurrentImageNew.Image = newMaskAppliedImage;
+
+            newMaskAppliedImage.Save("saved.jpg");
         }
     }
 
